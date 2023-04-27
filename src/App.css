@@ -1,38 +1,352 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none !important;
+  list-style-type: none !important;
+  box-sizing: border-box !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ff_Segoe {
+  font-family: "Segoe UI" !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  /* -----FONT SIZE---- */
+  --fs-xsm: 14px;
+  --fs-sm: 16px;
+  --fs-md: 24px;
+  --fs-lg: 40px;
+  --fs-xl: 55px;
+  /* color */
+  --color-black: #000000;
+  --color-green: #1ad079;
+  --color-grey: #4c4d4d;
+  --color-white: #ffffff;
+  --color-light-white: #b8bbc7;
+  --color-darkblue: #07133b;
+  --color-lightgrey: #b3b7c5;
+  --color-lightestgrey: #b4b8c4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* -------FONT SIZE------- */
+.fs_xsm {
+  font-size: var(--fs-xsm) !important;
+}
+
+.fs_sm {
+  font-size: var(--fs-sm) !important;
+}
+
+.fs_md {
+  font-size: var(--fs-md) !important;
+}
+
+.fs_lg {
+  font-size: var(--fs-lg) !important;
+}
+
+.fs_xl {
+  font-size: var(--fs-xl) !important;
+}
+
+/* color */
+.color_black {
+  color: var(--color-black);
+}
+
+.color_green {
+  color: var(--color-green);
+}
+
+.color_grey {
+  color: var(--color-grey);
+}
+
+.color_white {
+  color: var(--color-white);
+}
+
+.color_light-white {
+  color: var(--color-light-white);
+}
+
+.color_darkblue {
+  color: var(--color-darkblue);
+}
+
+.color_lightgrey {
+  color: var(--color-lightgrey);
+}
+
+.color_lightestgrey {
+  color: var(--color-lightestgrey);
+}
+
+/*  */
+.container_cus {
+  max-width: 1140px !important;
+  padding-left: 12px;
+  padding-right: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg_white {
+  background-color: var(--color-white);
+}
+
+.nav_padding {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav_link_hover {
+  transition: all .3 linear;
+  position: relative;
+}
+
+.nav_link_hover:hover {
+  -webkit-text-stroke-width: .3px;
+  color: var(--color-black) !important;
+}
+
+.nav_link_hover::before {
+  content: "";
+  width: 0%;
+  position: absolute;
+  bottom: -7px;
+  height: 3px;
+  left: 50%;
+  transition: all .2s linear;
+  transform: translateX(-50%);
+  background-color: var(--color-green);
+}
+
+.nav_link_hover:hover::before {
+  width: 100%;
+}
+
+.b_radius_8 {
+  border-radius: 8px;
+}
+
+.nav_btn_modify {
+  border: 1px solid transparent !important;
+  background-color: transparent;
+  padding: 10px 25px;
+  transition: all .2s linear;
+  border-radius: 4px;
+}
+
+.nav_btn_modify:hover {
+  border: 1px solid var(--color-green) !important;
+}
+
+.border_green {
+  border: 1px solid var(--color-green) !important;
+}
+
+.menuicon {
+  width: 28px;
+  height: 33px;
   display: flex;
-  flex-direction: column;
+  cursor: pointer;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.line {
+  height: 3px;
+  width: 100%;
+  position: relative;
+  background-color: var(--color-green) !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.line::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-green) !important;
+}
+
+.line::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-green) !important;
+}
+
+.cross_position {
+  top: 10%;
+  right: 10%;
+  position: absolute;
+}
+
+.opacity_7 {
+  opacity: .7;
+}
+
+.green_circle {
+  width: 271px;
+  height: 200px;
+  background: #E4F9EF;
+  filter: blur(50px);
+  position: absolute;
+  top: 0%;
+  z-index: -1;
+}
+
+.z_index_2 {
+  z-index:1;
+}
+
+.header_green_box {
+  background: #1AD079;
+  border-radius: 5px;
+  padding: 33px 46px;
+}
+
+.header_blue_box {
+  background: #07133B;
+  border-radius: 5px;
+  padding: 38px 46px;
+}
+
+.hover_translate {
+  transition: all .3s linear;
+}
+
+.c_pointer {
+  cursor: pointer;
+}
+
+.header_green_box:hover .hover_translate {
+  transform: translateX(20px);
+}
+
+.header_blue_box:hover .hover_translate {
+  transform: translateX(20px);
+}
+
+.w_163px {
+  width: 163px;
+}
+
+.mini_box {
+  width: 130px;
+  height: 30px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  border-radius: 4px;
+}
+
+.blackline {
+  width: 40px;
+  height: 3px;
+  background-color: #000 !important;
+}
+
+.greyline {
+  width: 40px;
+  height: 3px;
+  background-color: #d9d9d9 !important;
+}
+
+.toparrow_position {
+  top: 12%;
+  left: 5px;
+}
+
+.bottomarrow_position {
+  top: 12%;
+  right: 5px;
+}
+
+.blue_position_circle {
+  max-width: 468px;
+  width: 100%;
+  background: #E6EBFF;
+  filter: blur(75px);
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+}
+
+body {
+  background-color: #000 !important;
+}
+
+.blue_position_small_circle {
+
+  max-width: 161px;
+  width: 100%;
+  background: #E6EBFF;
+  filter: blur(75px);
+  height: 243px;
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+
+.green_big_circle {
+  max-width: 517px;
+  width: 100%;
+  height: 421px;
+  background: #E4F9EF;
+  filter: blur(50px);
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.grey_position_circle {
+  max-width: 161px;
+  width: 100%;
+  background: #D9D9D9;
+  filter: blur(150px);
+  height: 243px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer_bg {
+  background: #07133B;
+  border-radius: 15px;
+}
+
+@media (max-width:992px) {
+
+  .mobile_ul {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    background-color: #E6EBFF;
+    z-index: 20 !important;
+    transition: all .3s linear;
   }
-  to {
-    transform: rotate(360deg);
+
+  .show {
+    left: 0%;
+  }
+
+  .hide {
+    left: 100%;
+  }
+}
+
+@media (max-width:576px) {
+  .mx_max_auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
